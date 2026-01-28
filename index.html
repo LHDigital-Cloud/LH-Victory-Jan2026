@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotus Victory | Market Leader 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --hyundai-blue: #0072C6;
+            --hyundai-deep: #002C5F;
+            --hyundai-sand: #E4DCD3;
+            --bg-lite: #F8FAFC;
+        }
+        body { 
+            font-family: 'Space Grotesk', sans-serif; 
+            background-color: var(--bg-lite); 
+            color: var(--hyundai-deep);
+            overflow-x: hidden;
+        }
+        .victory-card {
+            background: white;
+            border: 2px solid rgba(0, 114, 198, 0.1);
+            border-radius: 3rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 44, 95, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .victory-card:hover {
+            transform: scale(1.02);
+            border-color: var(--hyundai-blue);
+        }
+        .winner-badge {
+            background: linear-gradient(135deg, var(--hyundai-blue) 0%, var(--hyundai-deep) 100%);
+            color: white;
+            box-shadow: 0 10px 20px rgba(0, 114, 198, 0.3);
+        }
+        .text-visible {
+            color: #001a3a; /* Ultra-dark blue for perfect visibility */
+        }
+        .stat-value {
+            background: linear-gradient(to bottom, var(--hyundai-deep), var(--hyundai-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="p-4 md:p-12">
+
+    <header class="max-w-6xl mx-auto text-center mb-16 animate__animated animate__zoomIn">
+        <div class="inline-block winner-badge px-6 py-2 rounded-full text-xs font-black tracking-[0.4em] mb-8">
+            🏆 CONSECUTIVE CHAMPION
+        </div>
+        <h1 class="text-6xl md:text-9xl font-800 tracking-tighter text-visible leading-none mb-6">
+            VICTORY <br><span class="text-[#0072C6]">DECLARED</span>
+        </h1>
+        <p class="text-xl md:text-2xl font-medium text-slate-600 max-w-3xl mx-auto">
+            Lotus Hyundai dominates the digital landscape for the <span class="underline decoration-4 decoration-[#E4DCD3]">second month in a row</span>.
+        </p>
+    </header>
+
+    <main class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 mb-20">
+        
+        <div class="lg:col-span-7 victory-card p-12 relative overflow-hidden animate__animated animate__fadeInLeft">
+            <div class="relative z-10">
+                <div class="flex items-center gap-4 mb-10">
+                    <div class="w-16 h-16 rounded-2xl bg-[#0072C6]/10 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-[#0072C6]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <h2 class="text-4xl font-800 text-visible">Lotus Hyundai</h2>
+                </div>
+
+                <div class="flex items-baseline gap-4 mb-4">
+                    <span class="text-[12rem] font-800 stat-value tracking-tighter leading-none" id="lotus-val">0</span>
+                    <span class="text-2xl font-bold text-slate-400">ORGANIC VISITORS</span>
+                </div>
+
+                <div class="grid grid-cols-2 gap-8 border-t border-slate-100 pt-10">
+                    <div>
+                        <p class="text-xs font-black text-[#0072C6] tracking-widest uppercase mb-1">Winning Model</p>
+                        <p class="text-2xl font-bold text-visible">Hyundai Venue (39%)</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-black text-[#0072C6] tracking-widest uppercase mb-1">Growth Trend</p>
+                        <p class="text-2xl font-bold text-visible">+29.2% MoM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-[#E4DCD3]/30 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-8 animate__animated animate__fadeInRight">
+            
+            <div class="victory-card p-10 bg-slate-50/50">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-xl font-bold text-slate-500">Chandra Hyundai</h3>
+                    <span class="text-rose-500 font-black text-xs uppercase tracking-widest">Declining</span>
+                </div>
+                <div class="flex items-baseline gap-3">
+                    <span class="text-7xl font-800 text-slate-500" id="chandra-val">0</span>
+                    <span class="text-sm font-bold text-slate-500">VISITORS</span>
+                </div>
+                <p class="text-xs text-slate-500 mt-4 leading-relaxed italic">
+                    Focus remains on "Spare Parts" and "Warranty" rather than new sales leads.
+                </p>
+            </div>
+
+            <div class="victory-card p-10 bg-slate-50/50 ">
+                <h3 class="text-xl font-bold text-slate-400 mb-6">Kovai Hyundai</h3>
+                <div class="flex items-baseline gap-3">
+                    <span class="text-7xl font-800 text-slate-500">12</span>
+                    <span class="text-sm font-bold text-slate-500">VISITORS</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <section class="max-w-6xl mx-auto mb-20">
+        <div class="bg-[#002C5F] rounded-[3rem] p-12 md:p-20 text-white relative overflow-hidden">
+            <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h3 class="text-4xl md:text-5xl font-800 mb-6 tracking-tight">The Winning <span class="text-[#0072C6]">Keyword</span> Strategy</h3>
+                    <p class="text-lg text-[#E4DCD3] leading-relaxed mb-8">
+                        Lotus secured Position<br><strong style="font-weight: bold;">#3</strong> for <strong class="text-[#0072C6]">"Hyundai Venue on road price coimbatore"</strong> and<strong class="text-[#0072C6]">  "Hyundai prime hb price coimbatore"</strong>,<br><strong style="font-weight: bold;">#4</strong> for <strong class="text-[#0072C6]">"Hyundai taxi car price coimbatore"</strong>, <br><strong style="font-weight: bold;">#5</strong> for <strong class="text-[#0072C6]">"Creta on road price coimbatore"</strong>,<br> capturing high-intent buyers ready to purchase.
+                    </p>
+                    <div class="inline-flex items-center gap-3 px-6 py-3 bg-white/10 rounded-2xl border border-white/10">
+                        <span class="text-2xl">📈</span>
+                        <span class="font-bold text-sm tracking-widest uppercase">Sales Intent Dominance</span>
+                    </div>
+                </div>
+                <div class="hidden md:block floating">
+                    <div class="bg-white/5 p-8 rounded-[2rem] border border-white/10 backdrop-blur-sm">
+                        <div class="space-y-4">
+                            <div class="h-4 w-3/4 bg-[#0072C6] rounded-full"></div>
+                            <div class="h-4 w-1/2 bg-[#E4DCD3] rounded-full opacity-50"></div>
+                            <div class="h-4 w-full bg-white/20 rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center pb-20">
+        <p class="text-slate-400 font-black tracking-[0.5em] uppercase text-xs">Lotus Hyundai • Market Intelligence • Jan 2026</p>
+    </footer>
+
+    <script>
+        function runCelebration() {
+            const count = 200;
+            const defaults = { origin: { y: 0.7 } };
+
+            function fire(particleRatio, opts) {
+                confetti({
+                    ...defaults,
+                    ...opts,
+                    particleCount: Math.floor(count * particleRatio),
+                    colors: ['#002C5F', '#0072C6', '#E4DCD3', '#FFFFFF']
+                });
+            }
+
+            fire(0.25, { spread: 26, startVelocity: 55 });
+            fire(0.2, { spread: 60 });
+            fire(0.35, { spread: 100, decay: 0.91, scalar: 0.8 });
+            fire(0.1, { spread: 120, startVelocity: 25, decay: 0.92, scalar: 1.2 });
+            fire(0.1, { spread: 120, startVelocity: 45 });
+        }
+
+        function animateNumber(id, target) {
+            let current = 0;
+            const increment = target / 50;
+            const element = document.getElementById(id);
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.innerText = target;
+                    clearInterval(timer);
+                } else {
+                    element.innerText = Math.floor(current);
+                }
+            }, 30);
+        }
+
+        window.onload = () => {
+            setTimeout(runCelebration, 500);
+            animateNumber('lotus-val', 312); // From report 
+            animateNumber('chandra-val', 270); // User's previous calculation
+        };
+    </script>
+</body>
+</html>
